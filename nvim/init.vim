@@ -8,6 +8,10 @@ set expandtab
 set tabstop=2
 set textwidth=0
 set shiftwidth=2
+set nobackup
+set noswapfile
+
+set clipboard=unnamed " Set system clipboard as default
 
 " ---------- Splits ---------
 set splitbelow
@@ -22,6 +26,7 @@ nnoremap <C-w>- :split<CR>
 nnoremap <C-w>\| :vsplit<CR>
 " --------------------------
 
+" Set <leader> to \
 let mapleader = '\'
 
 call plug#begin('~/.config/nvim/plugged')
@@ -48,7 +53,6 @@ let g:ctrlp_working_path_mode = 'ra'
 colorscheme dracula
 
 " Hotkeys
-
 map! <leader><leader> <ESC>
 
 " \<BS -> kill buffer, \] -> next buffer, \[ -> prev buffer
@@ -60,3 +64,13 @@ nnoremap <leader>[ :bprevious<CR>
 " Save on C-s
 nnoremap <C-s> :w<CR>
 
+" Wildmenu
+set wildmenu
+set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.png,*.gif,*.jpg,*.swp
+set wildmode=list:longest
+
+" Fixing missclicks
+command! WQ wq
+command! Wq wq
+command! W w
+command! Q q
