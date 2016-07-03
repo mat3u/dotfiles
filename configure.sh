@@ -41,7 +41,13 @@ if ! command_exists nvim ; then
     sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt-get update
     sudo apt-get install -y neovim
-fi 
+fi
+
+if ! command_exists xclip ; then
+    echo "Installing xclip..."
+    sudo apt-get install -y xclip
+fi
+
 
 echo "Creating symlinks for configuration files..."
 mkdir ~/.config &>/dev/null
