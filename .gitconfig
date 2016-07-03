@@ -1,0 +1,19 @@
+[user]
+	email = matt.stasch@gmail.com
+	name = Matt Stasch
+[alias]
+	st = status -sb
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+	ci = commit
+	co = checkout
+	cl = clone
+	br = branch
+	dc = diff --cached
+	last = log -1 --stat
+	unstage = reset HEAD --
+[push]
+	default = matching
+[core]
+	editor = nvim
+[color]
+	ui = true
