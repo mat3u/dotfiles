@@ -55,3 +55,4 @@ ln -s ${DOTFILES_HOME}/nvim ${HOME}/.config/nvim
 ln -s ${DOTFILES_HOME}/.tmux.conf ${HOME}/.tmux.conf
 ln -s ${DOTFILES_HOME}/.zshrc ${HOME}/.zshrc
 ln -s ${DOTFILES_HOME}/.gitconfig ${HOME}/.gitconfig
+ln -s ${DOTFILES_HOME}/.vimperatorrc ${HOME}/.vimperatorrc
