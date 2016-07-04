@@ -1,4 +1,4 @@
-export ZSH=/home/mat3u/.oh-my-zsh
+export ZSH=${HOME}/.oh-my-zsh
 
 ZSH_THEME="simple"
 
@@ -9,6 +9,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 
 source $ZSH/oh-my-zsh.sh
 
+export NVM_DIR="${HOME}/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Aliases
 
 alias e=nvim
@@ -18,9 +21,6 @@ alias clip="xclip -selection c"
 
 # Replace CAPS LOCK with additional CTRL
 setxkbmap -layout pl -option ctrl:nocaps 2>/dev/null
-
-# Set color
-so ~/.config/base16-gnome-terminal
 
 function motd {
 	echo "     __ _ _ __ ___ _   _ ___ "

@@ -32,6 +32,7 @@ let mapleader = '\'
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'dracula/vim'
+Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
@@ -50,7 +51,7 @@ let g:airline_powerline_fonts = 1
 let g:ctrlp_working_path_mode = 'ra'
 
 " Define colorscheme
-colorscheme dracula
+colorscheme dracula 
 
 " Hotkeys
 map! <leader><leader> <ESC>
