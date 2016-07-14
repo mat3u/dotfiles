@@ -7,7 +7,7 @@ set ruler
 set expandtab
 set tabstop=2
 set textwidth=0
-set shiftwidth=2
+set shiftwidth=4
 set nobackup
 set noswapfile
 
@@ -38,8 +38,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'ternjs/tern_for_vim'
+Plug 'isRuslan/vim-es6'
 Plug 'Valloric/YouCompleteMe'
 Plug 'elixir-lang/vim-elixir'
+Plug 'edkolev/tmuxline.vim'
 
 call plug#end()
 
@@ -49,6 +51,7 @@ let g:airline_powerline_fonts = 1
 
 " CTRL+P
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Define colorscheme
 colorscheme dracula 

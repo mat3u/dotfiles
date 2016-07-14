@@ -18,6 +18,8 @@ alias e=nvim
 alias vim=nvim
 alias so=source
 alias clip="xclip -selection c"
+alias c=/usr/bin/clear
+alias clear="c && motd"
 
 # Replace CAPS LOCK with additional CTRL
 setxkbmap -layout pl -option ctrl:nocaps 2>/dev/null
