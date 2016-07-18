@@ -42,6 +42,7 @@ Plug 'isRuslan/vim-es6'
 Plug 'Valloric/YouCompleteMe'
 Plug 'elixir-lang/vim-elixir'
 Plug 'edkolev/tmuxline.vim'
+Plug 'slashmili/alchemist.vim'
 
 call plug#end()
 
