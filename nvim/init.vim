@@ -42,6 +42,7 @@ Plug 'isRuslan/vim-es6'
 Plug 'Valloric/YouCompleteMe'
 Plug 'elixir-lang/vim-elixir'
 Plug 'edkolev/tmuxline.vim'
+Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
@@ -54,7 +55,7 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Define colorscheme
-colorscheme dracula 
+colorscheme dracula
 
 " Hotkeys
 map! <leader><leader> <ESC>

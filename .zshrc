@@ -22,7 +22,7 @@ alias c=/usr/bin/clear
 alias clear="c && motd"
 
 # Replace CAPS LOCK with additional CTRL
-setxkbmap -layout pl -option ctrl:nocaps 2>/dev/null
+# setxkbmap -layout pl -option esc:nocaps 2>/dev/null
 
 function motd {
 	echo "     __ _ _ __ ___ _   _ ___ "
