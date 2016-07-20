@@ -44,6 +44,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'edkolev/tmuxline.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -60,6 +61,12 @@ colorscheme dracula
 
 " Hotkeys
 map! <leader><leader> <ESC>
+map! jk <ESC>
+map! kj <ESC>
+map! jj <ESC>
+
+" Git Gutter
+nnoremap <leader><leader>g :GitGutterToggle<CR>
 
 " \<BS -> kill buffer, \] -> next buffer, \[ -> prev buffer
 nnoremap <leader><BS> :bdelete<CR>
