@@ -45,6 +45,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'airblade/vim-gitgutter'
+Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
 
@@ -87,3 +88,11 @@ command! WQ wq
 command! Wq wq
 command! W w
 command! Q q
+
+" Strip Whitespaces on save
+autocmd BufWritePre * :StripWhitespace
+
+" easymotion configuration
+" bidirectional character search
+map <leader>f <Plug>(easymotion-bd-f)
+
