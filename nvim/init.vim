@@ -33,7 +33,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'dracula/vim'
 Plug 'chriskempson/base16-vim'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-ctrlspace/vim-ctrlspace'
@@ -54,8 +54,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " CTRL+P
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+" let g:ctrlp_working_path_mode = 'ra'
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Define colorscheme
 colorscheme dracula
@@ -74,6 +74,12 @@ nnoremap <leader><BS> :bdelete<CR>
 nnoremap <leader><leader><BS> :bdelete!<CR>
 nnoremap <leader>] :bnext<CR>
 nnoremap <leader>[ :bprevious<CR>
+
+" ControlSpace
+nnoremap <silent><C-p> :CtrlSpace O<CR>
+if executable("ag")
+  let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+endif
 
 " Save on C-s
 nnoremap <C-s> :w<CR>
