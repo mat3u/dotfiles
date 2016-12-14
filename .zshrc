@@ -41,4 +41,6 @@ function motd {
 	echo ""
 }
 
+vim --cmd "set paste" +qall
+
 motd
