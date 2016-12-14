@@ -33,7 +33,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'dracula/vim'
 Plug 'chriskempson/base16-vim'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-ctrlspace/vim-ctrlspace'
@@ -45,6 +45,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'airblade/vim-gitgutter'
+Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
 
@@ -53,8 +54,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " CTRL+P
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+" let g:ctrlp_working_path_mode = 'ra'
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Define colorscheme
 colorscheme dracula
@@ -74,6 +75,12 @@ nnoremap <leader><leader><BS> :bdelete!<CR>
 nnoremap <leader>] :bnext<CR>
 nnoremap <leader>[ :bprevious<CR>
 
+" ControlSpace
+nnoremap <silent><C-p> :CtrlSpace O<CR>
+if executable("ag")
+  let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+endif
+
 " Save on C-s
 nnoremap <C-s> :w<CR>
 
@@ -87,3 +94,11 @@ command! WQ wq
 command! Wq wq
 command! W w
 command! Q q
+
+" Strip Whitespaces on save
+autocmd BufWritePre * :StripWhitespace
+
+" easymotion configuration
+" bidirectional character search
+map <leader>f <Plug>(easymotion-bd-f)
+
