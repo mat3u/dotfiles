@@ -39,13 +39,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'ternjs/tern_for_vim'
 Plug 'isRuslan/vim-es6'
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 Plug 'elixir-lang/vim-elixir'
 Plug 'edkolev/tmuxline.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'airblade/vim-gitgutter'
-Plug 'OmniSharp/omnisharp-vim'
+" Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
 

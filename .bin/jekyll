@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+PORT=${PORT:-8000}
+WORKDIR=${WORKDIR:-`pwd`}
+
+trap 'docker rm -f jekyll' SIGINT
+
+echo "Running Jekyll for ${WORKDIR} on port ${PORT}"
+
+docker run --name jekyll -p ${PORT}:4000 -v ${WORKDIR}:/srv/jekyll jekyll/jekyll

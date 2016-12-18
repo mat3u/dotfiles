@@ -28,6 +28,10 @@ if ! command_exists zsh ; then
     sudo apt-get install -y zsh
 fi
 
+echo "Installing docker..."
+sh -c "$(curl -fsSL https://get.docker.com/)" &>/dev/null
+sudo usermod -aG docker `whoami`
+
 echo "Installing oh-my-zsh...(please exit zsh when installation is done!)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &>/dev/null
 
@@ -55,4 +59,4 @@ ln -s ${DOTFILES_HOME}/nvim ${HOME}/.config/nvim
 ln -s ${DOTFILES_HOME}/.tmux.conf ${HOME}/.tmux.conf
 ln -s ${DOTFILES_HOME}/.zshrc ${HOME}/.zshrc
 ln -s ${DOTFILES_HOME}/.gitconfig ${HOME}/.gitconfig
-ln -s ${DOTFILES_HOME}/.vimperatorrc ${HOME}/.vimperatorrc
+ln -s ${DOTFILES_HOME}/.bin ${HOME}/.bin
