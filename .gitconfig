@@ -3,7 +3,7 @@
 	name = Matt Stasch
 [alias]
 	st = status -sb
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+	lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all"
 	ci = commit
 	co = checkout
 	cl = clone
@@ -11,6 +11,7 @@
 	dc = diff --cached
 	last = log -1 --stat
 	unstage = reset HEAD --
+	jira = !xdg-open https://parkeon.jira.com/browse/$(git rev-parse --abbrev-ref HEAD | grep -oE '^[A-Z]+-[0-9]+')
 [push]
 	default = matching
 [core]
