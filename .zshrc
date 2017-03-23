@@ -21,7 +21,7 @@ alias so=source
 alias clip="xclip -selection c"
 alias c=/usr/bin/clear
 alias clear="c && motd"
-alias docker-cleanup="docker ps --all | grep -v sinopia | cut -f1 -d " " | grep -v CONTAINER | xargs docker rm -f"
+alias docker-cleanup="docker ps --all | grep -v sinopia | cut -f1 -d ' ' | grep -v CONTAINER | xargs docker rm -f"
 alias docker-ip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
 alias gpod="git pull origin develop"
 
