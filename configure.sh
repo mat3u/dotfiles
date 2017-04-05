@@ -28,9 +28,11 @@ if ! command_exists zsh ; then
     sudo apt-get install -y zsh
 fi
 
-echo "Installing docker..."
-sh -c "$(curl -fsSL https://get.docker.com/)" &>/dev/null
-sudo usermod -aG docker `whoami`
+if ! command_exists docker ; then
+    echo "Installing docker..."
+    sh -c "$(curl -fsSL https://get.docker.com/)" &>/dev/null
+    sudo usermod -aG docker `whoami`
+fi
 
 echo "Installing oh-my-zsh...(please exit zsh when installation is done!)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &>/dev/null
