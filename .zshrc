@@ -1,7 +1,10 @@
 export ZSH=${HOME}/.oh-my-zsh
+export DOTFILES_HOME=${HOME}/.dotfiles
 
-ZSH_THEME="simple"
-#ZSH_THEME="geometry"
+export ZSH_CUSTOM=${DOTFILES_HOME}/zsh_custom
+
+# Theme!
+ZSH_THEME="mat3u"
 
 plugins=(git docker node npm zsh-autosuggestions)
 
@@ -15,8 +18,15 @@ export NVM_DIR="${HOME}/.nvm"
 
 # Aliases
 
-alias e=nvim
-alias vim=nvim
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+
+if command_exists nvim; then
+    alias e=nvim
+    alias vim=nvim
+fi
+
 alias so=source
 alias clip="xclip -selection c"
 alias c=/usr/bin/clear
@@ -39,12 +49,16 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 fi
 
 function motd {
-	echo "     __ _ _ __ ___ _   _ ___ "
-	echo "    / _\` | '__/ __| | | / __|"
-	echo "   | (_| | | | (__| |_| \\__ \\"
-	echo "    \\__,_|_|  \\___|\\__,_|___/"
-	echo ""
-	uptime
+    if [ -f ${DOTFILES_HOME}/motd ]; then
+        cat ${DOTFILES_HOME}/motd
+    else
+    	echo "     __ _ _ __ ___ _   _ ___ "
+	    echo "    / _\` | '__/ __| | | / __|"
+    	echo "   | (_| | | | (__| |_| \\__ \\"
+    	echo "    \\__,_|_|  \\___|\\__,_|___/"
+    	echo ""
+    fi
+    uptime
 	echo ""
 }
 
